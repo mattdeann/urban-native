@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
+import Header from './Header/Header';
+import MyGarden from './MyGarden/MyGarden';
 import AllCrops from './AllCrops';
 
 function App() {
 
-
   return (
-    <AllCrops />
+    <>
+      <Header />
+      <MyGarden />
+      <AllCrops />
+    </>
   );
 }
 
