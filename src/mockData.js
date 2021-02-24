@@ -219,31 +219,36 @@ const users =
 [
   {
     id: 1,
-    name: `Merlin Crumpacker`,
+    firstName: `Merlin`,
+    lastName: `Crumpacker`,
     myGarden: [1, 7]
     // to build garden, iterate through cropIDs, find each one, and use that built array
   },
   {
     id: 2,
-    name: `Jerry Garcia`,
+    firstName: `Jerry`,
+    lastName: `Garcia`,
     myGarden: [1, 3, 8, 10]
     // to build garden, iterate through cropIDs, find each one, and use that built array
   },
   {
     id: 3,
-    name: `John Dillinger`,
+    firstName: `John`,
+    lastName: `Dillinger`,
     myGarden: [1, 2, 3]
     // to build garden, iterate through cropIDs, find each one, and use that built array
   },
   {
     id: 4,
-    name: `Steven Universe`,
+    firstName: `Steven`,
+    lastName: `Universe`,
     myGarden: [2, 5, 7, 8, 9, 10]
     // to build garden, iterate through cropIDs, find each one, and use that built array
   },
   {
     id: 5,
-    name: `Finn Mertenes`,
+    firstName: `Finn`,
+    lastName: `Mertens`,
     myGarden: [6]
     // to build garden, iterate through cropIDs, find each one, and use that built array
   },
