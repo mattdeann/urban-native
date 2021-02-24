@@ -1,0 +1,10 @@
+.site-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-button {
+  font-size: x-small;
+  margin: 1rem;
+  width: 5rem;
+}
