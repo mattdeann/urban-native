@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import './MyGarden.css';
-import {users} from '../mockData';
 import Crop from '../Crop';
 
 function MyGarden({data, user}) {
@@ -14,12 +13,10 @@ function MyGarden({data, user}) {
   //   })
   // }, [])
   const crops = data;
-  // let currentUser = users[0];
   console.log(user)
 
   const filteredCrops = () => {
     const userCrops = [];
-      // currentUser = user;
       const currentUser = user;
       if (currentUser.myGarden) {
         currentUser.myGarden.forEach(cropId => {
@@ -27,7 +24,6 @@ function MyGarden({data, user}) {
             return crop.id === cropId
           }))
         })
-        
       }
       return userCrops;
     }

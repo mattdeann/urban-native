@@ -4,7 +4,6 @@ import Header from './Header/Header';
 import MyGarden from './MyGarden/MyGarden';
 import AllCrops from './AllCrops';
 import {getCrops, getUser} from './fetchRequests';
-// import {crops} from './mockData';
 
 function App() {
   const [crops, setCrops] = useState([])
