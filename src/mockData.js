@@ -111,7 +111,7 @@ const crops = [
   {
     id: 6,
     key: Date.now(),
-    name: `Tomatoes`,
+    name: `Cherry Tomatoes`,
     description: `Cherry tomatoes range in size from a thumbtip to the size of a golf ball.
     Their shape ranges from spherical to slightly oblong to pointed at the bottom.
     They are often red, but can also be yellow, green, striped, and even black.
@@ -133,16 +133,20 @@ const crops = [
   {
     id: 7,
     key: Date.now(),
-    name: String,
-    description: String,
+    name: `Brussels Srpouts`,
+    description: `Brussels sprouts grow on the sides of stalks up to 91cm tall.
+    The stalks are covered with leaves and the sprouts look like miniature cabbages.
+    They are a cool weather crop and are delicious roasted.`,
     // Description is a plant description followed by care instructions
-    sunReqs: String,
-    sowingMethod: String,
-    spread: Number,
-    rowSpacing: Number,
-    height: Number,
-    daysToMaturity: Number,
-    photoLinks: [String, String]
+    sunReqs: `Full Sun`,
+    sowingMethod: `Sow seeds indoors, harden off seedlings before transplanting outdoors`,
+    spread: 30,
+    rowSpacing: 60,
+    height: 91,
+    daysToMaturity: `Brussels Sprouts are a slow growing vegetable, taking 26 to 31 weeks to reach
+    maturity and produce a crop of sprouts. However, there are few other vegetables that
+    can be enjoyed fresh from September right through February.`,
+    photoLinks: [`https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/551e27c53732390003830100.jpg?1428039620`]
   },
   {
     id: 8,
