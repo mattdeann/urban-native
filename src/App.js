@@ -3,7 +3,7 @@ import './App.css';
 import Header from './Header/Header';
 import MyGarden from './MyGarden/MyGarden';
 import AllCrops from './AllCrops';
-import mockData from './mockData';
+import {crops} from './mockData';
 
 function App() {
 
@@ -11,7 +11,7 @@ function App() {
     <>
       <Header />
       <MyGarden />
-      <AllCrops data={mockData}/>
+      <AllCrops data={crops}/>
     </>
   );
 }

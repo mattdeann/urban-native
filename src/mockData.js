@@ -253,4 +253,4 @@ const users =
   },
 ]
 
-export default crops;
+export {crops, users};
