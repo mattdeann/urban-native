@@ -194,16 +194,24 @@ const crops = [
   {
     id: 10,
     key: Date.now(),
-    name: String,
-    description: String,
+    name: `Shishito Pepper`,
+    description: `Shishito peppers are mild, thin-walled, slightly sweet peppers
+    native to East Asia. They are small, slender peppers, usually 5-10cm long, with
+    slightly wrinkled flesh. They have a Scoville rating of 50-200, but about 1 in 10
+    peppers can be significantly spicy. Shishitos are usually harvested while still
+    green and unripe, but they can be left on the plant to ripen and turn orange and red.
+    Shishitos are popular in Japan and Korea and are often grilled, roasted, sautéed, or fried into tempura.`,
     // Description is a plant description followed by care instructions
-    sunReqs: String,
+    sunReqs: `Full Sun`,
     sowingMethod: String,
-    spread: Number,
-    rowSpacing: Number,
-    height: Number,
-    daysToMaturity: Number,
-    photoLinks: [String, String]
+    spread: 50,
+    rowSpacing: 50,
+    height: 75,
+    daysToMaturity: `60 to 80 days. Start by planting in a sunny area with well-drained, fertile soil.
+    When planting, amend the soil with compost or worm castings. This gives the peppers plenty of nutrients
+    as they grow. Finish by mulching each plant with a few inches of straw or compost. This helps keep the
+    roots moist, and the plants protected from temperature swings.`,
+    photoLinks: [`https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/59f386eb33d94e000400000a.jpg?1509132007`]
   }
 ]
 
