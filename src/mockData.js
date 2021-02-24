@@ -111,16 +111,24 @@ const crops = [
   {
     id: 6,
     key: Date.now(),
-    name: String,
-    description: String,
+    name: `Tomatoes`,
+    description: `Cherry tomatoes range in size from a thumbtip to the size of a golf ball.
+    Their shape ranges from spherical to slightly oblong to pointed at the bottom.
+    They are often red, but can also be yellow, green, striped, and even black.
+    More oblong cherry tomatoes often share characteristics with plum tomatoes, and are
+    known as grape tomatoes. Cherry tomatoes can be quite sweet (such as the Sungold or Sunsweet
+    yellow varieties), more traditionally acidic, or deep in flavor. They are delicious for
+    snacking, in salads, lightly roasted or grilled, or baked. They require little to no pruning unlike larger tomato plants.`,
     // Description is a plant description followed by care instructions
-    sunReqs: String,
-    sowingMethod: String,
-    spread: Number,
-    rowSpacing: Number,
-    height: Number,
-    daysToMaturity: Number,
-    photoLinks: [String, String]
+    sunReqs: `Full Sun`,
+    sowingMethod: `Sow seeds indoors 6-8 weeks before the last expected frost`,
+    spread: 45,
+    rowSpacing: 60,
+    height: 60,
+    daysToMaturity: `Because of the small fruit size, typically one to two inches, these high
+    yielding plants often bear fruit in just 55 to 65 days, with some ready for harvest in as
+    little as 45 days. However, there are those that can take up to 80 days to mature as well.`,
+    photoLinks: [`https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/57073ebd4a3af70003000006.jpg?1460092602`]
   },
   {
     id: 7,
