@@ -151,16 +151,24 @@ const crops = [
   {
     id: 8,
     key: Date.now(),
-    name: String,
-    description: String,
+    name: `Potatoes`,
+    description: `Potatoes are starchy root vegetables in the Solanaceae, or Nightshade, family,
+    which also includes tomatoes, eggplants, and peppers. They originated in South America,
+    and spread to become a worldwide staple. The leaves and fruit are usually poisonous
+    and the stem tuber is the only edible part once it is cooked. The potato can be cooked in
+    many ways, brewed into alcohol, and also used as the basis for creating bioplastics.
+    More growing information is available in individual species entries.`,
     // Description is a plant description followed by care instructions
-    sunReqs: String,
-    sowingMethod: String,
-    spread: Number,
-    rowSpacing: Number,
-    height: Number,
-    daysToMaturity: Number,
-    photoLinks: [String, String]
+    sunReqs: `Full Sun`,
+    sowingMethod: `Direct seed outdoors after last frost. Each piece must have one eye.`,
+    spread: 30,
+    rowSpacing: 90,
+    height: 60,
+    daysToMaturity: `Two weeks after the vines have flowered, you can, if you wish, reach
+    into the soil or mulch and retrieve a few baby potatoes. Otherwise, wait until the vines die back.
+    Dead vines signal that the tubers have reached maturity. Now reach into the soil with your hands and pull the tubers up.
+    Small new potatoes can be ready as early as ten weeks. However, full sized potatoes take about 80-100 days to reach maturity.`,
+    photoLinks: [`https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/551dbd5d3732390003620100.jpg?1428012380`]
   },
   {
     id: 9,
