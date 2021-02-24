@@ -1,24 +1,36 @@
 import React from 'react';
 import './MyGarden.css';
-import {crops, users} from '../mockData';
 import Crop from '../Crop';
 
-function MyGarden() {
-  const currentUser = users[2];
+function MyGarden({data, user}) {
+  // const [crops, setCrops] = useState([])
+
+  // useEffect(() => {
+  //   console.log(getCrops())
+  //   getCrops()
+  //   .then(result => {
+  //     return setCrops(result)
+  //   })
+  // }, [])
+  const crops = data;
+  console.log(user)
+
   const filteredCrops = () => {
     const userCrops = [];
-    currentUser.myGarden.forEach(cropId => {
-      userCrops.push(crops.find(crop => {
-        return crop.id === cropId
-      }))
-    })
-    console.log(userCrops);
-    return userCrops;
-  }
+      const currentUser = user;
+      if (currentUser.myGarden) {
+        currentUser.myGarden.forEach(cropId => {
+          userCrops.push(crops.find(crop => {
+            return crop.id === cropId
+          }))
+        })
+      }
+      return userCrops;
+    }
 
   const currentUserGarden = filteredCrops().map(crop => {
     return (
-      <Crop 
+      crop && <Crop 
         id={crop.id}
         name={crop.name}
         image={crop.photoLinks[0]}
