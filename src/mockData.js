@@ -69,21 +69,25 @@ const crops = [
      `Kale has a relatively fast growth rate and can grow from seed to harvest in about two months.
       It is a biennial plant that typically is grown as an annual. It is best planted in spring
       in cooler climates, and in late summer in warmer climates.`,
-    photoLinks: [`thumbnail_url": "https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/55b6b7ce6465380003910200.jpg?1438037945`]
+    photoLinks: [`https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/55b6b7ce6465380003910200.jpg?1438037945`]
   },
   {
     id: 4,
     key: Date.now(),
-    name: String,
-    description: String,
+    name: `Broccoli`,
+    description: `Broccoli has large flower heads known as "crowns" that are green to blue-green
+    in color, grouped tightly together atop a thick stem, and surrounded by leaves. Broccoli
+    resembles cauliflower, a different cultivar in its species. It thrives in cool weather.`,
     // Description is a plant description followed by care instructions
-    sunReqs: String,
-    sowingMethod: String,
-    spread: Number,
-    rowSpacing: Number,
-    height: Number,
-    daysToMaturity: Number,
-    photoLinks: [String, String]
+    sunReqs: `Full Sun`,
+    sowingMethod: `Sow seeds indoors and transplant outside`,
+    spread: 60,
+    rowSpacing: 40,
+    height: 75,
+    daysToMaturity: `Broccoli grown from seed will come to harvest in 100 to 150 days.
+    Grown from transplants broccoli will come to harvest in 55 to 80 days. Cut buds
+    when they are still green and tight. Cut the central head with five to six inches of stem.`,
+    photoLinks: [`https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/54b4b5ea61306500020b0000.jpg?1421129190`]
   },
   {
     id: 5,
