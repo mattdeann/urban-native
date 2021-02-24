@@ -253,3 +253,5 @@ const users =
     // to build garden, iterate through cropIDs, find each one, and use that built array
   },
 ]
+
+export default crops;
