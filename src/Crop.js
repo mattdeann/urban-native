@@ -1,10 +1,11 @@
 import React from 'react';
 import './Crop.css';
 
-const Crop = () => {
+const Crop = ({id, name, image}) => {
     return (
         <div className='seed-packet'>
-            <p>Seed Packet</p>
+            <h3>{name}</h3>
+            <img src={image} alt={`Photo of ${name}`}></img>
         </div>
     );
 }
