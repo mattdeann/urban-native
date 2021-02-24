@@ -92,16 +92,21 @@ const crops = [
   {
     id: 5,
     key: Date.now(),
-    name: String,
-    description: String,
+    name: `Carrots`,
+    description: `The carrot is a root vegetable. It is usually orange in color, but some cultivars are purple,
+    black, red, white, and yellow. The most commonly eaten part of the plant is the taproot, but the greens
+    are sometimes eaten as well. The leaves appear first, and the taproot grows more slowly beneath the soil.
+    Fast-growing cultivars mature within three months of sowing the seed. Slower-maturing cultivars are harvested four months after sowing.`,
     // Description is a plant description followed by care instructions
-    sunReqs: String,
-    sowingMethod: String,
-    spread: Number,
-    rowSpacing: Number,
-    height: Number,
-    daysToMaturity: Number,
-    photoLinks: [String, String]
+    sunReqs: `Full Sun`,
+    sowingMethod: `Direct Seed, thin to 3cm apart when seedlings are 8cm high`,
+    spread: 5,
+    rowSpacing: 5,
+    height: 10,
+    daysToMaturity: `Harvesting. Carrots should be ready for harvest 70 to 80 days after planting.
+    Pull them from the soil when the roots are 1 to 1½ inches in diameter. To avoid breaking the
+    carrot while pulling, loosen the soil around the carrot with a spade.`,
+    photoLinks: [`https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/58c312395865650004000000.jpg?1489179191`]
   },
   {
     id: 6,
