@@ -7,7 +7,19 @@ const AllCrops = () => {
         <main>
             <h2>Farmer's Market</h2>
             <section className='crops-grid'>
-                <div>
+                <div className='seed-packet'>
+                    <p>Seed Packet</p>
+                </div>
+                <div className='seed-packet'>
+                    <p>Seed Packet</p>
+                </div>
+                <div className='seed-packet'>
+                    <p>Seed Packet</p>
+                </div>
+                <div className='seed-packet'>
+                    <p>Seed Packet</p>
+                </div>
+                <div className='seed-packet'>
                     <p>Seed Packet</p>
                 </div>
             </section>

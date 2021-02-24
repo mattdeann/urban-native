@@ -1,0 +1,17 @@
+h2 {
+    text-align: center;
+}
+
+.crops-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+}
+
+.seed-packet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid black;
+    height: 150px;
+}
