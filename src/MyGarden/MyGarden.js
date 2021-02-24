@@ -1,9 +1,20 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './MyGarden.css';
-import {crops, users} from '../mockData';
+import {users} from '../mockData';
 import Crop from '../Crop';
 
-function MyGarden() {
+function MyGarden({data}) {
+  // const [crops, setCrops] = useState([])
+
+  // useEffect(() => {
+  //   console.log(getCrops())
+  //   getCrops()
+  //   .then(result => {
+  //     return setCrops(result)
+  //   })
+  // }, [])
+  const crops = data;
+
   const currentUser = users[2];
   const filteredCrops = () => {
     const userCrops = [];
@@ -12,13 +23,12 @@ function MyGarden() {
         return crop.id === cropId
       }))
     })
-    console.log(userCrops);
     return userCrops;
   }
 
   const currentUserGarden = filteredCrops().map(crop => {
     return (
-      <Crop 
+      crop && <Crop 
         id={crop.id}
         name={crop.name}
         image={crop.photoLinks[0]}
