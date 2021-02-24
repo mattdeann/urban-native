@@ -9,7 +9,7 @@ const AllCrops = ({data}) => {
                 id={crop.id}
                 name={crop.name}
                 image={crop.photoLinks[0]}
-                key={crop.key}
+                key={crop.id}
             />
         )
     })
