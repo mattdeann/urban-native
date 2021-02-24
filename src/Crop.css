@@ -1,0 +1,8 @@
+.seed-packet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid blue;
+    margin: 20px;
+    height: 150px;
+}
