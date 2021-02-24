@@ -3,24 +3,28 @@ import './App.css';
 import Header from './Header/Header';
 import MyGarden from './MyGarden/MyGarden';
 import AllCrops from './AllCrops';
-import getCrops from './fetchRequests';
+import {getCrops, getUser} from './fetchRequests';
 // import {crops} from './mockData';
 
 function App() {
   const [crops, setCrops] = useState([])
+  const [user, setUser] = useState({})
 
   useEffect(() => {
-    console.log(getCrops())
     getCrops()
     .then(result => {
       setCrops(result)
+    })
+    getUser(4)
+    .then(result => {
+      setUser(result)
     })
   }, [])
 
   return (
     <>
       <Header />
-      <MyGarden data={crops}/>
+      <MyGarden data={crops} user={user}/>
       <AllCrops data={crops}/>
     </>
   );

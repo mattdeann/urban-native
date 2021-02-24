@@ -3,7 +3,7 @@ import './MyGarden.css';
 import {users} from '../mockData';
 import Crop from '../Crop';
 
-function MyGarden({data}) {
+function MyGarden({data, user}) {
   // const [crops, setCrops] = useState([])
 
   // useEffect(() => {
@@ -14,17 +14,23 @@ function MyGarden({data}) {
   //   })
   // }, [])
   const crops = data;
+  // let currentUser = users[0];
+  console.log(user)
 
-  const currentUser = users[2];
   const filteredCrops = () => {
     const userCrops = [];
-    currentUser.myGarden.forEach(cropId => {
-      userCrops.push(crops.find(crop => {
-        return crop.id === cropId
-      }))
-    })
-    return userCrops;
-  }
+      // currentUser = user;
+      const currentUser = user;
+      if (currentUser.myGarden) {
+        currentUser.myGarden.forEach(cropId => {
+          userCrops.push(crops.find(crop => {
+            return crop.id === cropId
+          }))
+        })
+        
+      }
+      return userCrops;
+    }
 
   const currentUserGarden = filteredCrops().map(crop => {
     return (
