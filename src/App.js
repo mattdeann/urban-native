@@ -1,8 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Header from './Header/Header';
 import MyGarden from './MyGarden/MyGarden';
+import AllCrops from './AllCrops';
 
 function App() {
 
@@ -10,8 +10,9 @@ function App() {
     <>
       <Header />
       <MyGarden />
+      <AllCrops />
     </>
-  )
+  );
 }
 
 export default App;
