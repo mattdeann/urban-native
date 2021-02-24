@@ -173,16 +173,23 @@ const crops = [
   {
     id: 9,
     key: Date.now(),
-    name: String,
-    description: String,
+    name: `Cauliflower`,
+    description: `Cauliflower is a vegetable in the Brassicaceae family. The solid, firm head
+    resembles that of broccoli and is usually white, but can also be yellow, purple, or green
+    in color. Like broccoli, it sits atop a stalk. The head is wrapped in thick leaves that
+    begin to open when the plant is ready for harvest. All cauliflower does best in cool weather.`,
     // Description is a plant description followed by care instructions
-    sunReqs: String,
-    sowingMethod: String,
-    spread: Number,
-    rowSpacing: Number,
-    height: Number,
-    daysToMaturity: Number,
-    photoLinks: [String, String]
+    sunReqs: `Full Sun`,
+    sowingMethod: `Sow seeds indoors, harden seedlings off before transplanting`,
+    spread: 30,
+    rowSpacing: 60,
+    height: 75,
+    daysToMaturity: `Time from planting to harvest is 55 to 100 days for cauliflower grown
+    from transplants 85 to 130 days for cauliflower grown from seed. Under good growing
+    conditions, the heads develop rapidly to about six to eight inches in diameter.
+    The mature head should be compact, firm, and white. Cut the whole head from the main stem.
+    The leaves can be cooked like collards or cabbage.`,
+    photoLinks: [`https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/58c3bdf07b12f80004000012.jpg?1489223147`]
   },
   {
     id: 10,
