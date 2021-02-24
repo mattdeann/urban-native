@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './AllCrops.css';
+import Crop from './Crop';
 
 const AllCrops = () => {
     
@@ -7,21 +8,11 @@ const AllCrops = () => {
         <main>
             <h2>Farmer's Market</h2>
             <section className='crops-grid'>
-                <div className='seed-packet'>
-                    <p>Seed Packet</p>
-                </div>
-                <div className='seed-packet'>
-                    <p>Seed Packet</p>
-                </div>
-                <div className='seed-packet'>
-                    <p>Seed Packet</p>
-                </div>
-                <div className='seed-packet'>
-                    <p>Seed Packet</p>
-                </div>
-                <div className='seed-packet'>
-                    <p>Seed Packet</p>
-                </div>
+                <Crop />
+                <Crop />
+                <Crop />
+                <Crop />
+                <Crop />
             </section>
         </main>
     );
