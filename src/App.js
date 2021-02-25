@@ -18,7 +18,6 @@ function App() {
     })
     getUser(4)
     .then(result => {
-      console.log(result)
       setUser(result)
     })
   }, [])
@@ -26,7 +25,7 @@ function App() {
   return (
     <>
       <Header />
-      <Route exact path="/" render={ ( { crops, user } ) => {
+      <Route exact path="/" render={() => {
       return (
       <>
         <MyGarden data={crops} user={user} />
@@ -34,7 +33,7 @@ function App() {
       </>
       )
     }}/>
-    <Route path="/:id" render={ ( { crops, match } ) => <CropDetails data={crops} id={match.params.id}/>} />
+    <Route path="/:id" render={ ( { match }) => <CropDetails data={crops} id={match.params.id}/>} />
     </>
   );
 }
