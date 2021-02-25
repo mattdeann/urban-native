@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Header/Header';
 import MyGarden from './MyGarden/MyGarden';
 import AllCrops from './AllCrops';
+import { Route, Switch } from 'react-router-dom'
 import {getCrops, getUser} from './fetchRequests';
 
 function App() {
