@@ -3,7 +3,8 @@ import './App.css';
 import Header from './Header/Header';
 import MyGarden from './MyGarden/MyGarden';
 import AllCrops from './AllCrops';
-import { Route, Switch } from 'react-router-dom'
+import CropDetails from './CropDetails'
+import { Route, Switch } from 'react-router-dom';
 import {getCrops, getUser} from './fetchRequests';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     })
     getUser(4)
     .then(result => {
+      console.log(result)
       setUser(result)
     })
   }, [])
@@ -24,8 +26,15 @@ function App() {
   return (
     <>
       <Header />
-      <MyGarden data={crops} user={user}/>
-      <AllCrops data={crops}/>
+      <Route exact path="/" render={ ( { crops, user } ) => {
+      return (
+      <>
+        <MyGarden data={crops} user={user} />
+        <AllCrops data={crops} />
+      </>
+      )
+    }}/>
+    <Route path="/:id" render={ ( { crops, match } ) => <CropDetails data={crops} id={match.params.id}/>} />
     </>
   );
 }
