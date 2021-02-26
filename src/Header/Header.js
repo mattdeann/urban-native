@@ -5,10 +5,13 @@ function Header() {
   return (
     <header className="site-header">
       <h1>Urban Native</h1>
-      <p>Welcome, BRIAN</p>
+      <h2>Welcome, BRIAN</h2>
       <article className="buttons">
         <button className="header-button">
-          REGIONAL GROWING INFO
+          COLORADO INFO
+        </button>
+        <button className="header-button">
+          SOMETHING ELSE MAYBE?
         </button>
       </article>
     </header>
