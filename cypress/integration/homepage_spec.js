@@ -32,6 +32,19 @@ describe('Homepage', () => {
 
     it('should display a button within the header for Colorado gardening information', () => {
         cy
-        .get('button[class=header-button]').contains('Colorado Info')
+        .get('button[class=header-button]').contains('COLORADO INFO')
+    })
+
+    it('should display a section heading for My Garden', () => {
+        cy
+        .get('h1[class=my-garden-header]').contains('My Garden')
+    })
+
+    it('should display a seed packet within the My Garden section', () => {
+        cy
+        .get('div[class=seed-packet]').should('be.visible')
     })
 })
+
+
+// SHould test for the users changing and the difference of data being displayed
