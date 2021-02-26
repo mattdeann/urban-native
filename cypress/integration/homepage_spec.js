@@ -42,7 +42,28 @@ describe('Homepage', () => {
 
     it('should display a seed packet within the My Garden section', () => {
         cy
+        .wait(500)
         .get('div[class=seed-packet]').should('be.visible')
+        .get('div[class=seed-packet]:first').within(() => {
+            cy
+            .get('h3').contains('Shishito Pepper')
+            .get('img').should('be.visible')
+            // .get('img').should('have.attr', 'src', 'https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/59f386eb33d94e000400000a.jpg?1509132007')
+        })                                                                                                                                          
+        
+    })
+
+    it('should display a number of seed packets within My Garden', () => {
+        cy
+        .get('.my-garden').within(() => {
+            cy
+            .get('div')
+            .should(($div) => {
+                expect($div).to.have.length(6)
+            })
+
+        })
+        
     })
 })
 
