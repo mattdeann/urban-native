@@ -15,4 +15,23 @@ describe('Homepage', () => {
         .visit(baseUrl);
     });
 
+    it('should display a heading with the name of the app', () => {
+        cy
+        .get('h1').contains('Urban Native')
+    })
+
+    it('should display a heading that welcomes the user', () => {
+        cy
+        .get('h2').contains('Welcome')
+    })
+
+    it('should display a heading that welcomes the user', () => {
+        cy
+        .get('h2').contains('Welcome')
+    })
+
+    it('should display a button within the header for Colorado gardening information', () => {
+        cy
+        .get('button[class=header-button]').contains('Colorado Info')
+    })
 })
