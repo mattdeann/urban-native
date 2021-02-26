@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Header/Header';
 import MyGarden from './MyGarden/MyGarden';
 import AllCrops from './AllCrops';
+import GrowInfo from './GrowInfo/GrowInfo';
 import {getCrops, getUser} from './fetchRequests';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       <Header />
       <MyGarden data={crops} user={user}/>
       <AllCrops data={crops}/>
+      <GrowInfo />
     </>
   );
 }
