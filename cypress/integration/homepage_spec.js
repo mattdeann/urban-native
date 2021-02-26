@@ -68,4 +68,5 @@ describe('Homepage', () => {
 })
 
 
-// SHould test for the users changing and the difference of data being displayed
+// Should test for the users changing and the difference of data being displayed
+// Add intercept testing for the API fetch calls 
