@@ -18,6 +18,7 @@ function MyGarden({data, user}) {
   const filteredCrops = () => {
     const userCrops = [];
       const currentUser = user;
+      console.log(user)
       if (currentUser.myGarden) {
         currentUser.myGarden.forEach(cropId => {
           userCrops.push(crops.find(crop => {
@@ -30,7 +31,7 @@ function MyGarden({data, user}) {
 
   const currentUserGarden = filteredCrops().map(crop => {
     return (
-      crop && <Crop 
+      crop && <Crop
         id={crop.id}
         name={crop.name}
         image={crop.photoLinks[0]}

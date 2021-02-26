@@ -1,10 +1,25 @@
 .site-header {
+  align-items: center;
+  background-image: linear-gradient(#242424, black);
+  border-radius: 0 0 1rem 0;
+  color: goldenrod;
   display: flex;
+  font-size: clamp(0.2rem, 0.8rem, 1rem);
   justify-content: space-between;
+  margin-right: 2rem;
+  padding: 0.5rem;
 }
 
 .header-button {
-  font-size: x-small;
+  border: 2px solid white;
+  border-radius: 0.5rem;
+  background-color: goldenrod;
+  font-size: xx-small;
   margin: 1rem;
+  padding: 0.2rem;
   width: 5rem;
+}
+
+.header-button:hover {
+  cursor: pointer;
 }
