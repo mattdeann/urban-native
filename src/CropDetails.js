@@ -1,4 +1,6 @@
 import React from 'react';
+import './CropDetails.css';
+import { Link } from 'react-router-dom';
 
 
 
@@ -16,7 +18,9 @@ const CropDetails = ({data, id}) => {
       <p className="row-spacing">Row Spacing: {thisCrop.rowSpacing}cm</p>
       <p className="crop-height">Height: {thisCrop.height}cm</p>
       <p className="maturity">Days To Maturity: {thisCrop.daysToMaturity}</p>
-      <button>Back ⬅️</button>
+      <Link to={`/`} id={id}>
+      <button className="back-button">Back ⬅️</button>
+      </Link>
     </div>
   )
 }
