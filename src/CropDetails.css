@@ -1,4 +1,44 @@
+
+.crop-details-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+  height: 100vh;
+}
+
+.crop-details-image {
+  height: 50%;
+  width: 100%;
+  border-width: .5rem;
+  border-style: ridge;
+  border-radius: 2rem;
+}
+
+.crop-details-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+p {
+  color: gold;
+  line-height: 2;
+  padding-right: 1rem;
+}
+
+.details-text-wrapper {
+  width: 60%;
+}
+
+h1 {
+  color: gold;
+}
+
 .back-button {
+  align-self: flex-end;
   border: 2px solid white;
   border-radius: 0.5rem;
   background-color: goldenrod;

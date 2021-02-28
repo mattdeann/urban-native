@@ -2,11 +2,9 @@ import React from 'react';
 import './CropDetails.css';
 import { Link } from 'react-router-dom';
 
-
-
 const CropDetails = ({data, id}) => {
-
   const thisCrop = data.find(crop => crop.id === parseInt(id))
+  
   return (
     <div className="crop-details-container">
       <img className="crop-details-image" src={thisCrop.photoLinks[0]} />
