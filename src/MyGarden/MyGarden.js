@@ -13,19 +13,19 @@ function MyGarden({data, user}) {
   //   })
   // }, [])
   const crops = data;
-  console.log(user)
 
   const filteredCrops = () => {
     const userCrops = [];
       const currentUser = user;
-      console.log(user)
-      if (currentUser.myGarden) {
-        currentUser.myGarden.forEach(cropId => {
+      console.log(currentUser)
+      if (currentUser.my_garden) {
+        currentUser.my_garden.forEach(cropId => {
           userCrops.push(crops.find(crop => {
             return crop.id === cropId
           }))
         })
       }
+      console.log(userCrops);
       return userCrops;
     }
 
@@ -34,7 +34,7 @@ function MyGarden({data, user}) {
       crop && <Crop
         id={crop.id}
         name={crop.name}
-        image={crop.photoLinks[0]}
+        image={crop.photo_links[0]}
         key={crop.id}
       />
     )
