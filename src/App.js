@@ -17,7 +17,7 @@ function App() {
     .then(result => {
       setCrops(result)
     })
-    getUser(4)
+    getUser(3)
     .then(result => {
       setUser(result)
     })
