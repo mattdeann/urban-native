@@ -1,11 +1,10 @@
 import React from 'react';
-import './CropDetails.css'
-
-
+import './CropDetails.css';
+import { Link } from 'react-router-dom';
 
 const CropDetails = ({data, id}) => {
-
   const thisCrop = data.find(crop => crop.id === parseInt(id))
+  
   return (
     <div className="crop-details-container">
       <div className="crop-details-image-wrapper">
@@ -20,9 +19,9 @@ const CropDetails = ({data, id}) => {
         <p className="row-spacing">Row Spacing: {thisCrop.row_spacing}cm</p>
         <p className="crop-height">Height: {thisCrop.height}cm</p>
         <p className="maturity">Days To Maturity: {thisCrop.days_to_maturity}</p>
-        <div className="button-wrapper">
-          <button>Back ⬅️</button>
-        </div>
+        <Link to={`/`} id={id}>
+        <button className="back-button">Back ⬅️</button>
+        </Link>
       </div>
     </div>
   )

@@ -1,3 +1,4 @@
+
 .crop-details-container {
   display: flex;
   flex-direction: row-reverse;
@@ -36,7 +37,7 @@ h1 {
   color: gold;
 }
 
-button {
+.back-button {
   align-self: flex-end;
   border: 2px solid white;
   border-radius: 0.5rem;
@@ -47,8 +48,6 @@ button {
   width: 5rem;
 }
 
-.button-wrapper {
-  display:flex;
-  justify-content: flex-end;
-  margin-right: 11.5rem;
+.back-button:hover {
+  cursor: pointer;
 }
