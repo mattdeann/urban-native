@@ -4,12 +4,12 @@
   justify-content: space-around;
   align-items: center;
   padding: 2rem;
-  height: 100vh;
+  height: 100%;
 }
 
 .crop-details-image {
   height: 50%;
-  width: 100%;
+  width: 80%;
   border-width: .5rem;
   border-style: ridge;
   border-radius: 2rem;
@@ -18,7 +18,7 @@
 .crop-details-image-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-self: flex-start;
   height: 100%;
 }
 
