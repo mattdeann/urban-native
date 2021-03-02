@@ -25,7 +25,7 @@ const updateGarden = (id, arr) => {
     redirect: 'follow'
   };
   
-  return fetch(`https://urban-native-api.herokuapp.com/api/v1/users/${id}`, {requestOptions})
+  return fetch(`https://urban-native-api.herokuapp.com/api/v1/users/${id}`, requestOptions)
     .then(response => response.json())
     .then(result => result)
     // .catch(error => console.log('error', error));

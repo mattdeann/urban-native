@@ -18,7 +18,7 @@ h2 {
 
 .crops-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr) );
+  grid-template-columns: repeat(auto-fit, minmax(150px, 0.5fr) );
   grid-gap: 1rem;
   width: 90%;
 }

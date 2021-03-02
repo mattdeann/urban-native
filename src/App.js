@@ -37,10 +37,7 @@ function App() {
       setUser({my_garden: gardenCopy})
     }
     // console.log(user.my_garden)
-    // updateGarden(user.id, user.my_garden)
-    //   .then(result => {
-    //     setUser(result)
-    //   })
+    updateGarden(user.id, user.my_garden)
   }
 
   return (

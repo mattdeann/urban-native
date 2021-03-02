@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 
 const Crop = ({id, user, name, image, toggleFavorite}) => {
     let toggleText = '';
-    if (user && user.my_garden.includes(id)) {
-      toggleText = 'Remove From Garden'
+    if (user && user.my_garden && user.my_garden.includes(id)) {
+      toggleText = 'x'
     } else {
-      toggleText = 'Add To Garden'
+      toggleText = '+'
     }
     
     return (
