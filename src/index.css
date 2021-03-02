@@ -18,14 +18,3 @@ h2,
 h3 {
   font-weight: lighter;
 }
-
-  /* @media screen and (max-width: 600px) {
-    .crop-details-image {
-      height: 70vh;
-      width: 100vh;
-      border-width: .5rem;
-      border-style: ridge;
-      border-radius: 2rem;
-      float: right;
-    }
-  } */
