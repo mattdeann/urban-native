@@ -1,5 +1,6 @@
 # Urban Native
 
+![Home Page](https://i.imgur.com/YNnNZ8P.png)
 
 
 <!-- TABLE OF CONTENTS -->
@@ -23,7 +24,6 @@
 Front End Repo Link: [https://github.com/mattdeann/urban-native](https://github.com/mattdeann/urban-native)
 
 Back End Repo Link: [https://github.com/Codeherder19/Urban-Native-API](https://github.com/Codeherder19/Urban-Native-API)
-![Home Page](https://i.imgur.com/YNnNZ8P.png)
 
 
 <!-- ABOUT THE PROJECT -->
@@ -149,5 +149,7 @@ Contributions are what make the open source community such an amazing place to b
 ## Contact
 
 [Brian Forbes]()
+
 [Cameron Aragon]()
+
 [Matthew Dean](deanma95@gmail.com)
