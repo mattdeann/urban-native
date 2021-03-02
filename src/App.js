@@ -23,14 +23,27 @@ function App() {
     })
   }, [])
 
+  const toggleFavorite = (id) => {
+    console.log('click')
+    console.log(id)
+    if (user.my_garden.includes(id)) {
+      const index = user.my_garden.indexOf(id)
+
+      user.my_garden.splice(index, 1)
+    } else {
+      user.my_garden.push(id)
+    }
+    console.log(user.my_garden)
+  }
+
   return (
     <>
       <Header />
       <Route exact path="/" render={() => {
       return (
       <>
-        <MyGarden data={crops} user={user} />
-        <AllCrops data={crops} />
+        <MyGarden data={crops} user={user} toggleFavorite={toggleFavorite} />
+        <AllCrops data={crops} toggleFavorite={toggleFavorite} />
       </>
       )
     }}/>

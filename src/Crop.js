@@ -2,15 +2,19 @@ import React from 'react';
 import './Crop.css';
 import { Link } from 'react-router-dom'
 
-const Crop = ({id, name, image}) => {
+const Crop = ({id, name, image, toggleFavorite}) => {
     return (
-      <Link to={`/${id}`} id={id} aria-label={name}>
+      
         <div className='seed-packet'>
+          <section className="seed-packet-top">
             <h3>{name}</h3>
-            <img src={image} alt={`${name}`}></img>
-            <p className="footnote">© Urban Native</p>
+            <article onClick={() => toggleFavorite(id)} className="toggle">Add to Garden</article>
+          </section>
+          <Link to={`/${id}`} id={id} aria-label={name}>
+          <img src={image} alt={`${name}`}></img>
+          </Link>
+          <p className="footnote">© Urban Native</p>
         </div>
-      </Link>
     );
 }
 

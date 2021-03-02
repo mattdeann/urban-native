@@ -2,22 +2,12 @@ import React from 'react';
 import './MyGarden.css';
 import Crop from '../Crop';
 
-function MyGarden({data, user}) {
-  // const [crops, setCrops] = useState([])
-
-  // useEffect(() => {
-  //   console.log(getCrops())
-  //   getCrops()
-  //   .then(result => {
-  //     return setCrops(result)
-  //   })
-  // }, [])
+function MyGarden({data, user, toggleFavorite}) {
   const crops = data;
 
   const filteredCrops = () => {
     const userCrops = [];
       const currentUser = user;
-      console.log(currentUser)
       if (currentUser.my_garden) {
         currentUser.my_garden.forEach(cropId => {
           userCrops.push(crops.find(crop => {
@@ -25,7 +15,6 @@ function MyGarden({data, user}) {
           }))
         })
       }
-      console.log(userCrops);
       return userCrops;
     }
 
@@ -36,6 +25,7 @@ function MyGarden({data, user}) {
         name={crop.name}
         image={crop.photo_links[0]}
         key={crop.id}
+        toggleFavorite={toggleFavorite}
       />
     )
   })

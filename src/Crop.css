@@ -19,6 +19,17 @@
   transform: scale(1.02);
 }
 
+.seed-packet-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle {
+  font-size: xx-small;
+}
+
 img {
   height: 10rem;
   margin: 1rem;
