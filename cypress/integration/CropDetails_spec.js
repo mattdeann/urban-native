@@ -87,18 +87,18 @@ describe('CropDetails', () => {
       .get('p[class=row-spacing]').contains(`30cm`)
     })
 
-    // it.only('CropDetails component should have a height property measured in centimeters', () => {
-    //   cy
-    //   .get('a[id=21]').click()
-    //   cy
-    //   .get('p[class=row-spacing]').contains(`300cm`)
-    //   cy
-    //   .get('button[class=back-button]').click()
-    //   cy
-    //   .get('a[id=30]').click()
-    //   cy
-    //   .get('p[class=row-spacing]').contains(`30cm`)
-    // })
+    it.only('CropDetails component should have a height property measured in centimeters', () => {
+      cy
+      .get('a[id=29]').click()
+      cy
+      .get('p[class=crop-height]').contains(`120cm`)
+      cy
+      .get('button[class=back-button]').click()
+      cy
+      .get('a[id=13]').click()
+      cy
+      .get('p[class=crop-height]').contains(`15cm`)
+    })
 
 
 
