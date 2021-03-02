@@ -48,15 +48,32 @@ describe('CropDetails', () => {
       .get('p[class=crop-sun-requirements]').contains('Full Sun')
     })
 
-    it.only('CropDetails component should have a sowing method', () => {
+    it('CropDetails component should have a sowing method', () => {
       cy
       .get('a[id=19]').click()
       cy
       .get('p[class=sowing-method]').contains('Transplant bare-root plant')
+      cy
+      .get('button[class=back-button]').click()
+      cy
+      .get('a[id=22]').click()
+      cy
+      .get('p[class=sowing-method]').contains(`Lay the pit on its side and use a nutcracker`)
     })
-    // it.only('CropDetails component should have a sun requirement', () => {
-    //
-    // })
+
+    it.only('CropDetails component should have a spread property measured in centimeters', () => {
+      cy
+      .get('a[id=22]').click()
+      cy
+      .get('p[class=crop-spread]').contains(`450cm`)
+      cy
+      .get('button[class=back-button]').click()
+      cy
+      .get('a[id=21]').click()
+      cy
+      .get('p[class=crop-spread]').contains(`365cm`)
+    })
+    
     // it.only('CropDetails component should have a sun requirement', () => {
     //
     // })
