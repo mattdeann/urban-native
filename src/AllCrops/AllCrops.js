@@ -1,6 +1,6 @@
 import React from 'react';
 import './AllCrops.css';
-import Crop from './Crop';
+import Crop from '../Crop/Crop';
 
 function AllCrops({data, user, toggleFavorite}) {
   const crops = () => {

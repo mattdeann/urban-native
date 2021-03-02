@@ -7,7 +7,7 @@ const CropDetails = ({data, id}) => {
   
   return (
     <div className="crop-details-container">
-      <img className="crop-details-image" src={thisCrop.photo_links[0]} />
+      <img alt="crop" className="crop-details-image" src={thisCrop.photo_links[0]} />
       <h1 className="crop-details-name">{thisCrop.name}</h1>
       <p className="crop-details-description" >Description: {thisCrop.description}</p>
       <p className="crop-sun-requirements">Sun Requirement: {thisCrop.sun_reqs}</p>

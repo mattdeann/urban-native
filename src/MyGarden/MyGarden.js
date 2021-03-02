@@ -1,6 +1,6 @@
 import React from 'react';
 import './MyGarden.css';
-import Crop from '../Crop';
+import Crop from '../Crop/Crop';
 
 function MyGarden({data, user, toggleFavorite}) {
   const crops = data;
