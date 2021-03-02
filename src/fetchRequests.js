@@ -1,5 +1,5 @@
 const getCrops = () => {
-  return fetch("http://localhost:3001/api/v1/crops")
+  return fetch("https://urban-native-api.herokuapp.com/api/v1/crops")
   .then(response => {
     return response.json();
   })
@@ -7,7 +7,7 @@ const getCrops = () => {
 }
 
 const getUser = id => {
-  return fetch(`http://localhost:3001/api/v1/users/${id}`)
+  return fetch(`https://urban-native-api.herokuapp.com/api/v1/users/${id}`)
   .then(response => {
     return response.json();
   })
