@@ -1,14 +1,11 @@
 # Urban Native
-Front End Repo Link: [https://github.com/mattdeann/urban-native](https://github.com/mattdeann/urban-native)
 
-Back End Repo Link: [https://github.com/Codeherder19/Urban-Native-API](https://github.com/Codeherder19/Urban-Native-API)
-![Home Page](https://i.imgur.com/YNnNZ8P.png)
 
 
 <!-- TABLE OF CONTENTS -->
 
 ## Table of Contents
-
+* [Repo Links](#repo-links)
 * [About the Project](#about-the-project)
 * [Lanugages Used](#languages-used)
 * [Getting Started](#getting-started)
@@ -19,6 +16,14 @@ Back End Repo Link: [https://github.com/Codeherder19/Urban-Native-API](https://g
 * [Contributing](#contributing)
 * [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
+
+<!-- REPO LINKS -->
+## Repo Links
+
+Front End Repo Link: [https://github.com/mattdeann/urban-native](https://github.com/mattdeann/urban-native)
+
+Back End Repo Link: [https://github.com/Codeherder19/Urban-Native-API](https://github.com/Codeherder19/Urban-Native-API)
+![Home Page](https://i.imgur.com/YNnNZ8P.png)
 
 
 <!-- ABOUT THE PROJECT -->
@@ -64,6 +69,7 @@ cd urban-native
 cmd + t
 cd ..
 cd Urban-Native-API
+```
 
 3. Install NPM packages in both repos
 ```sh
