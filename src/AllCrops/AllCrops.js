@@ -7,7 +7,7 @@ function AllCrops({data, user, toggleFavorite}) {
     if (data) {
       return data.map(crop => {
         return (
-          <Crop 
+          <Crop
             id={crop.id}
             user={user}
             name={crop.name}
@@ -19,11 +19,11 @@ function AllCrops({data, user, toggleFavorite}) {
         )
       })
     }
-  } 
-    
+  }
+
   return (
       <main>
-          <h2>Farmer's Market</h2>
+          <h2 className="all-crops-heading">Farmer's Market</h2>
           <section className='crops-grid'>
               {crops()}
           </section>

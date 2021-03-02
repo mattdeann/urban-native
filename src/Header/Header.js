@@ -4,10 +4,12 @@ import './Header.css';
 function Header({user}) {
   return (
     <header className="site-header">
-      <h1>Urban Native</h1>
-      <p>Welcome, {user.first_name}</p>
-      <article className="empty">
-        
+      <h1 className='app-name'>Urban Native</h1>
+      <p className='welcome'>Welcome, {user.first_name}</p>
+      <article className="buttons">
+        <button className="header-button">
+          REGIONAL GROWING INFO
+        </button>
       </article>
     </header>
   )
