@@ -15,12 +15,12 @@
   border-style: ridge;
   border-radius: 2rem;
   float: right;
+  margin-left: .5rem;
 }
 
 p {
   color: gold;
   line-height: 2;
-  padding-right: 1rem;
 }
 
 h1 {
