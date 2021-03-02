@@ -42,7 +42,7 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header user={user} />
       <Route exact path="/" render={() => {
       return (
       <>

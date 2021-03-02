@@ -1,11 +1,11 @@
 import React from 'react';
 import './Header.css';
 
-function Header() {
+function Header({user}) {
   return (
     <header className="site-header">
       <h1>Urban Native</h1>
-      <p>Welcome, BRIAN</p>
+      <p>Welcome, {user.first_name}</p>
       <article className="empty">
         
       </article>
