@@ -22,7 +22,7 @@ describe('Homepage', () => {
 
     it('should display a heading that welcomes the user', () => {
         cy
-        .get('p[class=welcome]').contains('Welcome')
+        .get('p[class=welcome]').contains('Welcome, John')
     })
 
     it('should display a button for Colorado gardening information', () => {
@@ -47,13 +47,13 @@ describe('Homepage', () => {
         .get('a[id=10]').contains('Shishito Pepper')
     })
 
-    it('should display a number of seed packets within My Garden', () => {
+    it(`should display a 30 seed packets within Farmer's Market`, () => {
         cy
-        .get('.my-garden').within(() => {
+        .get('main').within(() => {
             cy
             .get('div')
             .should(($div) => {
-                expect($div).to.have.length(2)
+                expect($div).to.have.length(30)
             })
         })
     })
