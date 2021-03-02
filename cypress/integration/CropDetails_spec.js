@@ -15,5 +15,13 @@ describe('CropDetails', () => {
       .get('a[id=25]').click()
     })
 
+    it.only('CropDetails should contain a heading with the crop name', () => {
+      cy
+      .get('a[id=5]').click()
+      cy
+      .get('h1[class=crop-details-name]')
+      .contains('Carrots')
+    })
+
     
 });
