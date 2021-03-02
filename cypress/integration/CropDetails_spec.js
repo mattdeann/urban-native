@@ -22,7 +22,7 @@ describe('CropDetails', () => {
       .get('h1[class=crop-details-name]').contains('Carrots')
     })
 
-    it.only('CropDetails component should have a description', () => {
+    it('CropDetails component should have a description', () => {
       cy
       .get('a[id=25]').click()
       cy
@@ -35,7 +35,7 @@ describe('CropDetails', () => {
       .get('p[class=crop-details-description]').contains('Strawberries are a hybrid species')
     })
 
-    it.only('CropDetails component should have a sun requirement', () => {
+    it('CropDetails component should have a sun requirement', () => {
       cy
       .get('a[id=15]').click()
       cy
@@ -48,9 +48,12 @@ describe('CropDetails', () => {
       .get('p[class=crop-sun-requirements]').contains('Full Sun')
     })
 
-    // it.only('CropDetails component should have a sun requirement', () => {
-    //
-    // })
+    it.only('CropDetails component should have a sowing method', () => {
+      cy
+      .get('a[id=19]').click()
+      cy
+      .get('p[class=sowing-method]').contains('Transplant bare-root plant')
+    })
     // it.only('CropDetails component should have a sun requirement', () => {
     //
     // })
