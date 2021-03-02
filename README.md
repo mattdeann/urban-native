@@ -146,8 +146,15 @@ Contributions are what make the open source community such an amazing place to b
 <!-- CONTACT -->
 ## Contact
 
-[Brian Forbes]()
+Brian Forbes
+[Email](brianandrewf81@gmail.com)
+[GitHub](https://github.com/Codeherder10)
 
-[Cameron Aragon]()
 
-[Matthew Dean](deanma95@gmail.com)
+Cameron Aragon
+[Email](caragon4695@gmail.com)
+[GitHub](https://github.com/camaragon)
+
+Matthew Dean
+[Email](deanma95@gmail.com)
+[GitHub](https://github.com/mattdeann)
