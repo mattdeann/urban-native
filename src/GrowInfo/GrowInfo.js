@@ -1,5 +1,6 @@
 import React from 'react';
 import './GrowInfo.css';
+import { Link } from 'react-router-dom';
 
 function GrowInfo() {
 
@@ -7,9 +8,22 @@ function GrowInfo() {
     <section className="grow-info">
       <h1>Gardening on the Front Range</h1>
       <p>
-        Gardening is freaking hard. AND were a mile high??? Life has never been harder. Good thing you found this website(go you!)
+        Gardening in Colorado can be challenging. The average elevation of the state is 6,800 feet above sea-level. Three-fourths of the nation’s land above 10,000 feet is within its borders. Due to the high elevation, sunlight is frequently of high intensity and the humidity generally is low. These features, along with rapid and extreme weather changes and frequently poor soil conditions, make for challenges in growing plants.
+        <br/><br/>
+        Low humidity, fluctuating temperatures, alkaline clay soils and drying winds often restrict plant growth more than low temperatures.
+        Selecting plants that tolerate our soil and climatic conditions is key to Colorado gardening.
+        Colorado grows excellent flowers, vegetables and lawns.
+        Gardeners who are patient, know how to select plants that will do well, and manipulate the soil and microclimate will be amply rewarded.
+        <br/><br/>
+        <a href="https://extension.colostate.edu/topic-areas/yard-garden/colorado-gardening-challenge-to-newcomers-7-220/" target="_blank" rel="noreferrer">More Info Here</a>
       </p>
+      <Link to={`/`}>
+        <div className='button-container'>
+          <button className="back-button">Back</button>
+        </div>
+      </Link>
     </section>
+    
   )
 }
 
