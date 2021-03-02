@@ -6,10 +6,8 @@ function Header() {
     <header className="site-header">
       <h1>Urban Native</h1>
       <p>Welcome, BRIAN</p>
-      <article className="buttons">
-        <button className="header-button">
-          REGIONAL GROWING INFO
-        </button>
+      <article className="empty">
+        
       </article>
     </header>
   )
