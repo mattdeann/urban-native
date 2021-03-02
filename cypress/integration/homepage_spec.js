@@ -17,56 +17,44 @@ describe('Homepage', () => {
 
     it('should display a heading with the name of the app', () => {
         cy
-        .get('h1').contains('Urban Native')
+        .get('h1[class=app-name]').contains('Urban Native')
     })
 
     it('should display a heading that welcomes the user', () => {
         cy
-        .get('h2').contains('Welcome')
+        .get('p[class=welcome]').contains('Welcome, John')
     })
 
-    it('should display a heading that welcomes the user', () => {
+    it('should display a button for Colorado gardening information', () => {
         cy
-        .get('h2').contains('Welcome')
-    })
-
-    it('should display a button within the header for Colorado gardening information', () => {
-        cy
-        .get('button[class=header-button]').contains('COLORADO INFO')
+        .get('button[class=header-button]').contains('REGIONAL GROWING INFO')
     })
 
     it('should display a section heading for My Garden', () => {
         cy
-        .get('h1[class=my-garden-header]').contains('My Garden')
+        .get('h2[class=my-garden-header]').contains('My Garden')
+    })
+
+    it(`should display a section heading for Farmer's Market`, () => {
+        cy
+        .get('h2[class=all-crops-heading]').contains(`Farmer's Market`)
     })
 
     it('should display a seed packet within the My Garden section', () => {
         cy
         .wait(500)
         .get('div[class=seed-packet]').should('be.visible')
-        .get('div[class=seed-packet]:first').within(() => {
-            cy
-            .get('h3').contains('Shishito Pepper')
-            .get('img').should('be.visible')
-            // .get('img').should('have.attr', 'src', 'https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/59f386eb33d94e000400000a.jpg?1509132007')
-        })                                                                                                                                          
-        
+        .get('a[id=10]').contains('Shishito Pepper')
     })
 
-    it('should display a number of seed packets within My Garden', () => {
+    it(`should display a 30 seed packets within Farmer's Market`, () => {
         cy
-        .get('.my-garden').within(() => {
+        .get('main').within(() => {
             cy
             .get('div')
             .should(($div) => {
-                expect($div).to.have.length(6)
+                expect($div).to.have.length(30)
             })
-
         })
-        
     })
-})
-
-
-// Should test for the users changing and the difference of data being displayed
-// Add intercept testing for the API fetch calls 
+});
