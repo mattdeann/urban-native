@@ -17,22 +17,17 @@ describe('Homepage', () => {
 
     it('should display a heading with the name of the app', () => {
         cy
-        .get('h1').contains('Urban Native')
+        .get('h1[class=app-name]').contains('Urban Native')
     })
 
     it('should display a heading that welcomes the user', () => {
         cy
-        .get('h2').contains('Welcome')
+        .get('p[class=welcome]').contains('Welcome')
     })
 
-    it('should display a heading that welcomes the user', () => {
+    it('should display a button for Colorado gardening information', () => {
         cy
-        .get('h2').contains('Welcome')
-    })
-
-    it('should display a button within the header for Colorado gardening information', () => {
-        cy
-        .get('button[class=header-button]').contains('COLORADO INFO')
+        .get('button[class=header-button]').contains('REGIONAL GROWING INFO')
     })
 
     it('should display a section heading for My Garden', () => {
@@ -44,13 +39,7 @@ describe('Homepage', () => {
         cy
         .wait(500)
         .get('div[class=seed-packet]').should('be.visible')
-        .get('div[class=seed-packet]:first').within(() => {
-            cy
-            .get('h3').contains('Shishito Pepper')
-            .get('img').should('be.visible')
-            // .get('img').should('have.attr', 'src', 'https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/59f386eb33d94e000400000a.jpg?1509132007')
-        })                                                                                                                                          
-        
+        .get('a[id=10]').contains('Shishito Pepper')
     })
 
     it('should display a number of seed packets within My Garden', () => {
@@ -59,14 +48,12 @@ describe('Homepage', () => {
             cy
             .get('div')
             .should(($div) => {
-                expect($div).to.have.length(6)
+                expect($div).to.have.length(2)
             })
-
         })
-        
     })
 })
 
 
 // Should test for the users changing and the difference of data being displayed
-// Add intercept testing for the API fetch calls 
+// Add intercept testing for the API fetch calls

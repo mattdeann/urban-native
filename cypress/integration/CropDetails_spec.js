@@ -87,7 +87,7 @@ describe('CropDetails', () => {
       .get('p[class=row-spacing]').contains(`30cm`)
     })
 
-    it.only('CropDetails component should have a height property measured in centimeters', () => {
+    it('CropDetails component should have a height property measured in centimeters', () => {
       cy
       .get('a[id=29]').click()
       cy
@@ -100,7 +100,7 @@ describe('CropDetails', () => {
       .get('p[class=crop-height]').contains(`15cm`)
     })
 
-    it('CropDetails component should have a height property measured in centimeters', () => {
+    it('CropDetails component should have a days to maturity property measured in centimeters', () => {
       cy
       .get('a[id=18]').click()
       cy
@@ -113,7 +113,7 @@ describe('CropDetails', () => {
       .get('p[class=maturity]').contains(`200`)
     })
 
-    it.only('CropDetails component should have an image of the crop', () => {
+    it('CropDetails component should have an image of the crop', () => {
       cy
       .get('a[id=16]').click()
       cy

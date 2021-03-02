@@ -4,8 +4,8 @@ import './Header.css';
 function Header() {
   return (
     <header className="site-header">
-      <h1>Urban Native</h1>
-      <p>Welcome, BRIAN</p>
+      <h1 className='app-name'>Urban Native</h1>
+      <p className='welcome'>Welcome, BRIAN</p>
       <article className="buttons">
         <button className="header-button">
           REGIONAL GROWING INFO
