@@ -1,70 +1,153 @@
-# Getting Started with Create React App
+# Urban Native
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Home Page](https://i.imgur.com/YNnNZ8P.png)
 
-## Available Scripts
 
-In the project directory, you can run:
+<!-- TABLE OF CONTENTS -->
 
-### `npm start`
+## Table of Contents
+* [Repo Links](#repo-links)
+* [About the Project](#about-the-project)
+* [Lanugages Used](#languages-used)
+* [Getting Started](#getting-started)
+* [Prerequisites](#prerequisites)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Roadmap](#roadmap)
+* [Contributing](#contributing)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<!-- REPO LINKS -->
+## Repo Links
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Front End Repo Link: [https://github.com/mattdeann/urban-native](https://github.com/mattdeann/urban-native)
 
-### `npm test`
+Back End Repo Link: [https://github.com/Codeherder19/Urban-Native-API](https://github.com/Codeherder19/Urban-Native-API)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Urban Native is designed to help gardeners in urban settings (specifically Denver) plan their garden around what foods can be grown in their city's climate. The project utilizes a PERN stack (PostgreSQL, Express, React, Node) to store user garden information remotely. This allows users to leave the website and have the state of their garden maintained continously. Urban Native demonstrates CRUD by updating the PostgreSQL database upon user interaction. Users can exploit this by adding and deleting crops from their garden.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Languages Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* HTML
+* CSS
+* React.js
+* Cypress (testing)
+* Webpack (compiling)
+* Express.js
+* PostgreSQL
+* Node.js
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<!-- GETTING STARTED -->
+## Getting Started
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To get a local copy up and running follow these simple example steps.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Prerequisites
+* npm
+```sh
+npm install npm@latest -g
+```
+* Some browser
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Installation
 
-## Learn More
+1. Clone the two repos as siblings inside of a directory
+```sh
+git clone https://github.com/mattdeann/urban-native.git
+git clone https://github.com/Codeherder19/Urban-Native-API.git
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Open repos in seperate tabs
+```sh
+cd urban-native
+cmd + t
+cd ..
+cd Urban-Native-API
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Install NPM packages in both repos
+```sh
+npm install
+```
+4. Start the app
 
-### Code Splitting
+urban-native
+```sh
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Urban-Native-API
+```sh
+node server.js
+```
 
-### Analyzing the Bundle Size
+4. In a browser tab, open the app
+```sh
+http://localhost:3000/
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+5. API endpoint examples
 
-### Making a Progressive Web App
+Return all crops as an array of objects
+```
+http://localhost:3001/api/v1/crops
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Return a specific user by ID
+```
+http://localhost:3000/api/v1/users/:id
+```
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<!-- USAGE EXAMPLES -->
+## Usage
 
-### Deployment
+### View all crops
+  
+  * The home page contains all crops able to be grown in the Denver area.
+  ![All Crops](https://i.imgur.com/nJ7wLI7.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Add a crop to My Garden
+  * Inside of All Crops, users can click a + to add that crop to their garden both locally and on the database.
+  ![Add to My Garden](https://i.imgur.com/0q3SvQZ.gif)
+
+
+### Remove a crop from My Garden
+  * Inside of My Garden, users can click an X to delete that crop from their garden both locally and on the database.
+  ![Remove from My Garden](https://i.imgur.com/YrgVQlO.gif)
+
+<!-- ROADMAP -->
+## Roadmap
+
+See the [open issues](https://github.com/mattdeann/urban-native/issues) for a list of proposed features (and known issues).
+
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature-amazing-feature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature-amazing-feature`)
+5. Open a Pull Request
+
+
+<!-- CONTACT -->
+## Contact
+
+[Brian Forbes]()
+
+[Cameron Aragon]()
+
+[Matthew Dean](deanma95@gmail.com)
