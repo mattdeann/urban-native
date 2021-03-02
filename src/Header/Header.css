@@ -23,3 +23,19 @@
 .header-button:hover {
   cursor: pointer;
 }
+
+
+  @media screen and (max-width: 500px) {
+    .site-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      background-image: linear-gradient(#242424, black);
+      border-radius: 0 0 1rem 0;
+      color: goldenrod;
+      font-size: clamp(0.2rem, 0.8rem, 1rem);
+      margin-right: 2rem;
+      padding: 0.5rem;
+    }
+  }

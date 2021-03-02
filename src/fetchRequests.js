@@ -8,8 +8,8 @@ const getCrops = () => {
 
 const getUser = id => {
   return fetch(`https://urban-native-api.herokuapp.com/api/v1/users/${id}`)
-  .then(response => response.json())
-  .then(data => data)
+    .then(response => response.json())
+    .then(data => data)
 }
 
 const updateGarden = (id, arr) => {
