@@ -17,7 +17,9 @@ const CropDetails = ({data, id}) => {
       <p className="crop-height">Height: {thisCrop.height}cm</p>
       <p className="maturity">Days To Maturity: {thisCrop.days_to_maturity}</p>
       <Link to={`/`} id={id}>
-      <button className="back-button">Back ⬅️</button>
+        <div className='button-container'>
+          <button className="back-button">Back</button>
+        </div>
       </Link>
     </div>
   )

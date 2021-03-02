@@ -36,10 +36,14 @@ h1 {
   margin: 1rem;
   padding: 0.2rem;
   width: 10rem;
+  height: 2rem;
+  transition: ease(500);
 }
 
 .back-button:hover {
   cursor: pointer;
+  font-size: small;
+  background-color: darkgoldenrod;
 }
 
 .button-container {
@@ -47,13 +51,14 @@ h1 {
   justify-content: center;
 }
 
-@media screen and (max-width: 600px) {
-  .crop-details-image {
-    height: 50vh;
-    width: 90%;
-    border-width: .5rem;
-    border-style: ridge;
-    border-radius: 2rem;
-    float: right;
+
+  @media screen and (max-width: 600px) {
+    .crop-details-image {
+      height: 50vh;
+      width: 90%;
+      border-width: .5rem;
+      border-style: ridge;
+      border-radius: 2rem;
+      float: right;
+    }
   }
-}
