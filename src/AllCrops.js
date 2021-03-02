@@ -7,7 +7,7 @@ function AllCrops({data}) {
     if (data) {
       return data.map(crop => {
         return (
-          <Crop 
+          <Crop
             id={crop.id}
             name={crop.name}
             image={crop.photo_links[0]}
@@ -16,11 +16,11 @@ function AllCrops({data}) {
         )
       })
     }
-  } 
-    
+  }
+
   return (
       <main>
-          <h2>Farmer's Market</h2>
+          <h2 className="all-crops-heading">Farmer's Market</h2>
           <section className='crops-grid'>
               {crops()}
           </section>

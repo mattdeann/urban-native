@@ -32,7 +32,12 @@ describe('Homepage', () => {
 
     it('should display a section heading for My Garden', () => {
         cy
-        .get('h1[class=my-garden-header]').contains('My Garden')
+        .get('h2[class=my-garden-header]').contains('My Garden')
+    })
+
+    it(`should display a section heading for Farmer's Market`, () => {
+        cy
+        .get('h2[class=all-crops-heading]').contains(`Farmer's Market`)
     })
 
     it('should display a seed packet within the My Garden section', () => {
@@ -52,8 +57,4 @@ describe('Homepage', () => {
             })
         })
     })
-})
-
-
-// Should test for the users changing and the difference of data being displayed
-// Add intercept testing for the API fetch calls
+});
