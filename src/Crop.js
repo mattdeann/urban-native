@@ -2,19 +2,21 @@ import React from 'react';
 import './Crop.css';
 import { Link } from 'react-router-dom'
 
-const Crop = ({id, user, name, image, toggleFavorite}) => {
+const Crop = ({id, user, name, image, toggleFavorite, inGarden}) => {
     let toggleText = '';
     if (user && user.my_garden && user.my_garden.includes(id)) {
-      toggleText = 'x'
+      toggleText = <article onClick={() => toggleFavorite(id)} className="toggle">x</article>
+    } else if (user && user.my_garden && user.my_garden.includes(id) && inGarden === false) {
+      toggleText = <article onClick={() => toggleFavorite(id)} className="toggle" disabled={true}>+</article>
     } else {
-      toggleText = '+'
+      toggleText = <article onClick={() => toggleFavorite(id)} className="toggle">+</article>
     }
     
     return (
         <div className='seed-packet'>
           <section className="seed-packet-top">
             <h3>{name}</h3>
-            <article onClick={() => toggleFavorite(id)} className="toggle">{toggleText}</article>
+            {toggleText}
           </section>
           <Link to={`/${id}`} id={id} aria-label={name}>
             <img className = "crop-image" src={image} alt={`${name}`} />

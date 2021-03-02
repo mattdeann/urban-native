@@ -17,11 +17,11 @@ function App() {
     .then(result => {
       setCrops(result)
     })
-    getUser(3)
+    getUser(1)
     .then(result => {
       setUser(result)
     })
-  }, [])
+  }, [user])
 
   const toggleFavorite = (id) => {
     if (user.my_garden.includes(id)) {
@@ -29,12 +29,12 @@ function App() {
 
       const gardenCopy = user.my_garden
       gardenCopy.splice(index, 1)
-      setUser({my_garden: gardenCopy})
+      // setUser({my_garden: gardenCopy})
 
     } else {
       const gardenCopy = user.my_garden
       gardenCopy.push(id)
-      setUser({my_garden: gardenCopy})
+      // setUser({my_garden: gardenCopy})
     }
     // console.log(user.my_garden)
     updateGarden(user.id, user.my_garden)

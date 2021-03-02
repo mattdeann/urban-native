@@ -27,6 +27,7 @@ function MyGarden({data, user, toggleFavorite}) {
         image={crop.photo_links[0]}
         key={crop.id}
         toggleFavorite={toggleFavorite}
+        inGarden={true}
       />
     )
   })
