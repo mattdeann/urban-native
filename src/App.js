@@ -2,10 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Header from './Header/Header';
 import MyGarden from './MyGarden/MyGarden';
-import AllCrops from './AllCrops';
-import CropDetails from './CropDetails'
-import { Route, Switch } from 'react-router-dom';
-import GrowInfo from './GrowInfo/GrowInfo';
+import AllCrops from './AllCrops/AllCrops';
+import CropDetails from './CropDetails/CropDetails';
+import { Route } from 'react-router-dom';
 import {getCrops, getUser, updateGarden} from './fetchRequests';
 
 function App() {

@@ -1,6 +1,6 @@
 import React from 'react';
 import './MyGarden.css';
-import Crop from '../Crop';
+import Crop from '../Crop/Crop';
 
 function MyGarden({data, user, toggleFavorite}) {
   const crops = data;
@@ -35,9 +35,15 @@ function MyGarden({data, user, toggleFavorite}) {
   return (
     <article className="my-garden">
       <h2 className="my-garden-header">My Garden</h2>
+      {currentUserGarden.length > 0 ? 
       <section className="my-crops">
         {currentUserGarden}
       </section>
+      :
+      <section className="my-crops">
+        No crops in your garden... Add some!
+      </section>
+      }
     </article>
   )
 }
