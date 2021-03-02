@@ -42,7 +42,7 @@ function MyGarden({data, user}) {
 
   return (
     <article className="my-garden">
-      <h1 className="my-garden-header">My Garden</h1>
+      <h2 className="my-garden-header">My Garden</h2>
       <section className="my-crops">
         {currentUserGarden}
       </section>
