@@ -61,7 +61,7 @@ describe('CropDetails', () => {
       .get('p[class=sowing-method]').contains(`Lay the pit on its side and use a nutcracker`)
     })
 
-    it.only('CropDetails component should have a spread property measured in centimeters', () => {
+    it('CropDetails component should have a spread property measured in centimeters', () => {
       cy
       .get('a[id=22]').click()
       cy
@@ -73,7 +73,35 @@ describe('CropDetails', () => {
       cy
       .get('p[class=crop-spread]').contains(`365cm`)
     })
-    
+
+    it('CropDetails component should have a row spacing property measured in centimeters', () => {
+      cy
+      .get('a[id=21]').click()
+      cy
+      .get('p[class=row-spacing]').contains(`300cm`)
+      cy
+      .get('button[class=back-button]').click()
+      cy
+      .get('a[id=30]').click()
+      cy
+      .get('p[class=row-spacing]').contains(`30cm`)
+    })
+
+    // it.only('CropDetails component should have a height property measured in centimeters', () => {
+    //   cy
+    //   .get('a[id=21]').click()
+    //   cy
+    //   .get('p[class=row-spacing]').contains(`300cm`)
+    //   cy
+    //   .get('button[class=back-button]').click()
+    //   cy
+    //   .get('a[id=30]').click()
+    //   cy
+    //   .get('p[class=row-spacing]').contains(`30cm`)
+    // })
+
+
+
     // it.only('CropDetails component should have a sun requirement', () => {
     //
     // })
