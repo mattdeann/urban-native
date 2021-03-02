@@ -28,14 +28,11 @@ function App() {
 
       const gardenCopy = user.my_garden
       gardenCopy.splice(index, 1)
-      // setUser({my_garden: gardenCopy})
 
     } else {
       const gardenCopy = user.my_garden
       gardenCopy.push(id)
-      // setUser({my_garden: gardenCopy})
     }
-    // console.log(user.my_garden)
     updateGarden(user.id, user.my_garden)
   }
 
