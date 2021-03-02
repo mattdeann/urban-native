@@ -110,9 +110,7 @@ http://localhost:3000/api/v1/users/:id
 
 ### View all crops
   
-  * A traveler can input a desired trip
-  * If the trip request is valid, the traveler is able to book the trip
-  * The trip will then display in their main view as pending
+  * The home page contains all crops able to be grown in the Denver area.
   ![All Crops](https://i.imgur.com/nJ7wLI7.png)
 
 
