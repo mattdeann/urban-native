@@ -1,20 +1,15 @@
-
 .crop-details-container {
-  /* display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-around;
-  align-items: center; */
-  padding: 2rem;
   height: 100%;
+  padding: 2rem;
 }
 
 .crop-details-image {
   height: 70vh;
-  width: 60%;
-  border-width: .5rem;
   border-style: ridge;
   border-radius: 2rem;
+  border-width: .5rem;
   float: right;
+  width: 60%;
 }
 
 p {
@@ -33,17 +28,17 @@ h1 {
   border-radius: 0.5rem;
   background-color: goldenrod;
   font-size: xx-small;
+  height: 2rem;
   margin: 1rem;
   padding: 0.2rem;
-  width: 10rem;
-  height: 2rem;
   transition: ease(500);
+  width: 10rem;
 }
 
 .back-button:hover {
+  background-color: darkgoldenrod;
   cursor: pointer;
   font-size: small;
-  background-color: darkgoldenrod;
 }
 
 .button-container {
@@ -54,11 +49,11 @@ h1 {
 
   @media screen and (max-width: 600px) {
     .crop-details-image {
-      height: 50vh;
-      width: 90%;
-      border-width: .5rem;
       border-style: ridge;
       border-radius: 2rem;
+      border-width: .5rem;
       float: right;
+      height: 50vh;
+      width: 90%;
     }
   }

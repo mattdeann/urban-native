@@ -4,6 +4,7 @@ import Header from './Header/Header';
 import MyGarden from './MyGarden/MyGarden';
 import AllCrops from './AllCrops/AllCrops';
 import CropDetails from './CropDetails/CropDetails';
+import GrowInfo from './GrowInfo/GrowInfo';
 import { Route } from 'react-router-dom';
 import {getCrops, getUser, updateGarden} from './fetchRequests';
 
@@ -50,6 +51,7 @@ function App() {
       </>
       )
     }}/>
+    <Route path="/info" render={ () => <GrowInfo />} />
     <Route path="/:id" render={ ( { match }) => <CropDetails data={crops} id={match.params.id}/>} />
     </>
   );

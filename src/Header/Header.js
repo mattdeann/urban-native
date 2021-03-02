@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.css';
+import { Link } from 'react-router-dom';
 
 function Header({user}) {
   return (
@@ -7,9 +8,11 @@ function Header({user}) {
       <h1 className='app-name'>Urban Native</h1>
       <p className='welcome'>Welcome, {user.first_name}</p>
       <article className="buttons">
-        <button className="header-button">
-          REGIONAL GROWING INFO
-        </button>
+        <Link to={`/info`} aria-label="more-info">
+          <button className="header-button">
+            REGIONAL GROWING INFO
+          </button>
+        </Link>
       </article>
     </header>
   )
