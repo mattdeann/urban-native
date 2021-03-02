@@ -22,7 +22,7 @@ describe('Homepage', () => {
 
     it('should display a heading that welcomes the user', () => {
         cy
-        .get('p[class=welcome]').contains('Welcome, John')
+        .get('p[class=welcome]').contains('Welcome')
     })
 
     it('should display a button for Colorado gardening information', () => {
