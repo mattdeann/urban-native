@@ -40,13 +40,6 @@ describe('Homepage', () => {
         .get('h2[class=all-crops-heading]').contains(`Farmer's Market`)
     })
 
-    it('should display a seed packet within the My Garden section', () => {
-        cy
-        .wait(500)
-        .get('div[class=seed-packet]').should('be.visible')
-        .get('a[id=10]').contains('Shishito Pepper')
-    })
-
     it(`should display a 30 seed packets within Farmer's Market`, () => {
         cy
         .get('main').within(() => {
