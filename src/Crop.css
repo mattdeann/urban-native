@@ -30,3 +30,7 @@ img {
   align-self: flex-end;
   font-size: 0.3rem;
 }
+
+a {
+  text-decoration: none;
+}
