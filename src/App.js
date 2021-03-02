@@ -50,7 +50,7 @@ function App() {
       return (
       <>
         <MyGarden data={crops} user={user} toggleFavorite={toggleFavorite} />
-        <AllCrops data={crops} toggleFavorite={toggleFavorite} />
+        <AllCrops data={crops} user={user} toggleFavorite={toggleFavorite} />
       </>
       )
     }}/>

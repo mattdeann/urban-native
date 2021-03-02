@@ -22,6 +22,7 @@ function MyGarden({data, user, toggleFavorite}) {
     return (
       crop && <Crop
         id={crop.id}
+        user={user}
         name={crop.name}
         image={crop.photo_links[0]}
         key={crop.id}

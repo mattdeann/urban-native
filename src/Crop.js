@@ -2,12 +2,19 @@ import React from 'react';
 import './Crop.css';
 import { Link } from 'react-router-dom'
 
-const Crop = ({id, name, image, toggleFavorite}) => {
+const Crop = ({id, user, name, image, toggleFavorite}) => {
+    let toggleText = '';
+    if (user && user.my_garden.includes(id)) {
+      toggleText = 'Remove From Garden'
+    } else {
+      toggleText = 'Add To Garden'
+    }
+    
     return (
         <div className='seed-packet'>
           <section className="seed-packet-top">
             <h3>{name}</h3>
-            <article onClick={() => toggleFavorite(id)} className="toggle">Add to Garden</article>
+            <article onClick={() => toggleFavorite(id)} className="toggle">{toggleText}</article>
           </section>
           <Link to={`/${id}`} id={id} aria-label={name}>
             <img className = "crop-image" src={image} alt={`${name}`} />
