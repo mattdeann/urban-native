@@ -6,7 +6,7 @@ import AllCrops from './AllCrops';
 import CropDetails from './CropDetails'
 import { Route, Switch } from 'react-router-dom';
 import GrowInfo from './GrowInfo/GrowInfo';
-import {getCrops, getUser} from './fetchRequests';
+import {getCrops, getUser, updateGarden} from './fetchRequests';
 
 function App() {
   const [crops, setCrops] = useState([])
@@ -24,16 +24,23 @@ function App() {
   }, [])
 
   const toggleFavorite = (id) => {
-    console.log('click')
-    console.log(id)
     if (user.my_garden.includes(id)) {
       const index = user.my_garden.indexOf(id)
 
-      user.my_garden.splice(index, 1)
+      const gardenCopy = user.my_garden
+      gardenCopy.splice(index, 1)
+      setUser({my_garden: gardenCopy})
+
     } else {
-      user.my_garden.push(id)
+      const gardenCopy = user.my_garden
+      gardenCopy.push(id)
+      setUser({my_garden: gardenCopy})
     }
-    console.log(user.my_garden)
+    // console.log(user.my_garden)
+    // updateGarden(user.id, user.my_garden)
+    //   .then(result => {
+    //     setUser(result)
+    //   })
   }
 
   return (
