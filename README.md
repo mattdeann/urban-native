@@ -39,6 +39,7 @@ Urban Native is designed to help gardeners in urban settings (specifically Denve
 * Cypress (testing)
 * Webpack (compiling)
 * Express.js
+* Knex
 * PostgreSQL
 * Node.js
 
