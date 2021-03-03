@@ -51,7 +51,7 @@ function App() {
         </>
         )
       }}/>
-      <Route path="/:id" children={<CropDetails />} />
+      <Route path="/:id" render={({match}) => <CropDetails data={crops} id={match.params.id}/>} />
     </Switch>
     </>
   );
