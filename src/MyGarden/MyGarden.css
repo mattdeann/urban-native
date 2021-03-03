@@ -21,3 +21,10 @@
   grid-template-columns: repeat(auto-fill, minmax(150px, 0.5fr) );
   width: 90%;
 }
+
+.no-crops {
+  display: flex;
+  justify-content: center;
+  color: goldenrod;
+  font-size: 2rem;
+}

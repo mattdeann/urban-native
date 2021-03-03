@@ -20,6 +20,10 @@
   width: 5rem;
 }
 
+.welcome {
+  font-size: 1.5rem;
+}
+
 .header-button:hover {
   cursor: pointer;
 }
