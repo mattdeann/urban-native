@@ -6,7 +6,7 @@ function GrowInfo() {
 
   return (
     <section className="grow-info">
-      <h1 clasName='grow-info-heading'>Gardening on the Front Range</h1>
+      <h1 className='grow-info-heading'>Gardening on the Front Range</h1>
       <p className='colorado-grow-info'>
         Gardening in Colorado can be challenging. The average elevation of the state is 6,800 feet above sea-level. Three-fourths of the nation’s land above 10,000 feet is within its borders. Due to the high elevation, sunlight is frequently of high intensity and the humidity generally is low. These features, along with rapid and extreme weather changes and frequently poor soil conditions, make for challenges in growing plants.
         <br/><br/>
