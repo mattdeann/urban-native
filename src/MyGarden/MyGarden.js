@@ -35,12 +35,12 @@ function MyGarden({data, user, toggleFavorite}) {
   return (
     <article className="my-garden">
       <h2 className="my-garden-header">My Garden</h2>
-      {currentUserGarden.length > 0 ? 
+      {currentUserGarden.length > 0 ?
       <section className="my-crops">
         {currentUserGarden}
       </section>
       :
-      <section className="my-crops">
+      <section className="no-crops">
         No crops in your garden... Add some!
       </section>
       }
