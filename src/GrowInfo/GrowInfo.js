@@ -16,7 +16,7 @@ function GrowInfo() {
         Gardeners who are patient, know how to select plants that will do well, and manipulate the soil and microclimate will be amply rewarded.
         <br/><br/>
         <section className='link-container'>
-          <a href="https://extension.colostate.edu/topic-areas/yard-garden/colorado-gardening-challenge-to-newcomers-7-220/" target="_blank" rel="noreferrer">More Info Here</a>
+          <a className='grow-info-link' href="https://extension.colostate.edu/topic-areas/yard-garden/colorado-gardening-challenge-to-newcomers-7-220/" target="_blank" rel="noreferrer">More Info Here</a>
         </section>
       </p>
       <Link to={`/`}>

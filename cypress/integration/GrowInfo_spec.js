@@ -17,4 +17,18 @@ describe('CropDetails', () => {
       cy
       .get('.colorado-grow-info').contains('Gardening in Colorado can be challenging')
     })
+
+    it.only('should have a section with a link to additional grow info for front range', () => {
+      cy
+      .get('.link-container').contains('More Info Here')
+      cy
+      .get('.grow-info-link').should('have.attr', 'href', 'https://extension.colostate.edu/topic-areas/yard-garden/colorado-gardening-challenge-to-newcomers-7-220/')
+    })
+
+    it.only('should have a button that takes you back to home page', () => {
+      cy
+      .get('.back-button').click()
+      cy
+      .get('h1[class=app-name]').contains('Urban Native')
+    })
 });
