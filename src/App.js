@@ -5,6 +5,7 @@ import MyGarden from './MyGarden/MyGarden';
 import AllCrops from './AllCrops/AllCrops';
 import CropDetails from './CropDetails/CropDetails';
 import { Route, Switch } from 'react-router-dom';
+import GrowInfo from './GrowInfo/GrowInfo';
 import {getCrops, getUser, updateGarden} from './fetchRequests';
 
 function App() {
@@ -28,31 +29,29 @@ function App() {
 
       const gardenCopy = user.my_garden
       gardenCopy.splice(index, 1)
-      // setUser({my_garden: gardenCopy})
 
     } else {
       const gardenCopy = user.my_garden
       gardenCopy.push(id)
-      // setUser({my_garden: gardenCopy})
     }
-    // console.log(user.my_garden)
     updateGarden(user.id, user.my_garden)
   }
 
   return (
     <>
-    <Header user={user} />
-    <Switch>
-        <Route exact path="/" render={() => {
-        return (
-        <>
-          <MyGarden data={crops} user={user} toggleFavorite={toggleFavorite} />
-          <AllCrops data={crops} user={user} toggleFavorite={toggleFavorite} />
-        </>
-        )
-      }}/>
-      <Route path="/:id" render={({match}) => <CropDetails data={crops} id={match.params.id}/>} />
-    </Switch>
+      <Header user={user} />
+      <Switch>
+          <Route exact path="/" render={() => {
+          return (
+          <>
+            <MyGarden data={crops} user={user} toggleFavorite={toggleFavorite} />
+            <AllCrops data={crops} user={user} toggleFavorite={toggleFavorite} />
+          </>
+          )
+        }}/>
+        <Route path="/info" render={ () => <GrowInfo />} />
+        <Route path="/:id" render={({match}) => <CropDetails data={crops} id={match.params.id}/>} />
+      </Switch>
     </>
   );
 }

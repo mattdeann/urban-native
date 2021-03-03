@@ -22,7 +22,7 @@ describe('Homepage', () => {
 
     it('should display a heading that welcomes the user', () => {
         cy
-        .get('p[class=welcome]').contains('Welcome, John')
+        .get('p[class=welcome]').contains('Welcome')
     })
 
     it('should display a button for Colorado gardening information', () => {
@@ -40,13 +40,6 @@ describe('Homepage', () => {
         .get('h2[class=all-crops-heading]').contains(`Farmer's Market`)
     })
 
-    it('should display a seed packet within the My Garden section', () => {
-        cy
-        .wait(500)
-        .get('div[class=seed-packet]').should('be.visible')
-        .get('a[id=10]').contains('Shishito Pepper')
-    })
-
     it(`should display a 30 seed packets within Farmer's Market`, () => {
         cy
         .get('main').within(() => {
@@ -57,4 +50,35 @@ describe('Homepage', () => {
             })
         })
     })
-});
+
+    it('should be able to fetch user data from our API', () => {
+      cy
+      .intercept('GET','/api/v1/users/1').as('getUser')
+      cy
+      .wait('@getUser')
+      .then(({request, response}) => {
+
+        expect(response.statusCode).to.eq(200)
+        expect(response.body.first_name).to.eq('Merlin')
+        expect(response.body.last_name).to.eq('Crumpacker')
+      })
+    })
+
+    it('should be able to fetch crops data from our API', () => {
+      cy
+      .intercept('GET','/api/v1/crops').as('getCrops')
+      cy
+      .wait('@getCrops')
+      .then(({request, response}) => {
+
+        expect(response.statusCode).to.eq(200)
+        expect(response.body[0].id).to.eq(1)
+        expect(response.body[0].name).to.eq('Blackberries')
+        expect(response.body[0].sun_reqs).to.eq('Full Sun.')
+        expect(response.body[0].spread).to.eq(75)
+        expect(response.body[0].row_spacing).to.eq(100)
+        expect(response.body[0].height).to.eq(175)
+
+      })
+    })
+  });
