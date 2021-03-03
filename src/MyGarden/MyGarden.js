@@ -28,7 +28,6 @@ function MyGarden({data, user, toggleFavorite}) {
         key={crop.id}
         toggleFavorite={toggleFavorite}
         inGarden={true}
-        // dataIndex={crop.id}
       />
     )
   })

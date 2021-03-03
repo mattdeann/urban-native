@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './Crop.css';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const Crop = ({id, user, name, image, toggleFavorite, inGarden,}) => {
     let toggleText = '';
@@ -11,7 +11,7 @@ const Crop = ({id, user, name, image, toggleFavorite, inGarden,}) => {
     } else {
       toggleText = <article onClick={() => toggleFavorite(id)} className="toggle">+</article>
     }
-    
+
     return (
         <div className='seed-packet'>
           <section className="seed-packet-top">

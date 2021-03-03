@@ -4,7 +4,7 @@ import Header from './Header/Header';
 import MyGarden from './MyGarden/MyGarden';
 import AllCrops from './AllCrops/AllCrops';
 import CropDetails from './CropDetails/CropDetails';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import {getCrops, getUser, updateGarden} from './fetchRequests';
 
 function App() {
@@ -41,16 +41,18 @@ function App() {
 
   return (
     <>
-      <Header user={user} />
-      <Route exact path="/" render={() => {
-      return (
-      <>
-        <MyGarden data={crops} user={user} toggleFavorite={toggleFavorite} />
-        <AllCrops data={crops} user={user} toggleFavorite={toggleFavorite} />
-      </>
-      )
-    }}/>
-    <Route path="/:id" render={ ( { match }) => <CropDetails data={crops} id={match.params.id}/>} />
+    <Header user={user} />
+    <Switch>
+        <Route exact path="/" render={() => {
+        return (
+        <>
+          <MyGarden data={crops} user={user} toggleFavorite={toggleFavorite} />
+          <AllCrops data={crops} user={user} toggleFavorite={toggleFavorite} />
+        </>
+        )
+      }}/>
+      <Route path="/:id" children={<CropDetails />} />
+    </Switch>
     </>
   );
 }
