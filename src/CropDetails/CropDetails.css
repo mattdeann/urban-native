@@ -9,13 +9,13 @@
   border-radius: 2rem;
   border-width: .5rem;
   float: right;
+  margin-left: .5rem;
   width: 60%;
 }
 
 p {
   color: gold;
   line-height: 2;
-  padding-right: 1rem;
 }
 
 h1 {
